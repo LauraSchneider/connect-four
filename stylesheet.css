@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: crimson;
+}
+
+h1 {
+    color: crimson;
+    font-size: 55px;
+    font-family: arial black;
+    text-shadow: -3px 0 #000000, 0 4px #000000, 2px 0 #000000, 0 -4px #000000;
+
+    font-weight: 1500;
+    padding: 10px;
+    position: absolute;
+    top: -15px;
+    left: 489px;
+    margin-top: 10px;
+}
+
+#container {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px;
+    animation: slidein 4s ease-in-out;
+}
+
+@keyframes slidein {
+    0% {
+        margin-top: 700px;
+    }
+
+    100% {
+        margin-top: 60px;
+    }
+}
+
+.col {
+    background-color: black;
+    border: 8px solid black;
+}
+
+.slot {
+    background-color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 60px;
+    margin: 8px;
+}
+
+.player1 {
+    background-color: rgb(105, 255, 24);
+    animation: rotation 0.25s linear;
+    /*     animation: fadeIn 300ms ease-in-out; */
+}
+
+.player2 {
+    background-color: rgb(1, 18, 241);
+    animation: rotation 0.25s linear;
+    /*     animation: fadeIn 300ms ease-in-out; */
+}
+
+@keyframes rotation {
+    from {
+        transform: rotateX(180deg);
+    }
+    to {
+        transform: rotateX(359deg);
+    }
+}
+
+/* other slot animation option  */
+/*
+@keyframes fadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    50% {
+        display: block;
+        opcacity: 0.5;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    } */
+
+#base {
+    height: 30px;
+    width: 900px;
+    background-color: black;
+}
+
+#won {
+    font-size: 60px;
+    font-family: georgia;
+    font-weight: bold;
+    position: absolute;
+    top: 180px;
+    left: 250px;
+    color: black;
+}
+
+#modaltext {
+    font-size: 10px;
+}
+
+#modal {
+    height: 575px;
+    width: 825px;
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    z-index: 5000;
+    border-radius: 30px;
+    border: 5px solid rgb(105, 241, 203);
+    color: rgb(246, 27, 27);
+    animation: flash 3s infinite;
+}
+
+@keyframes flash {
+    0% {
+        background-color: red;
+    }
+
+    25% {
+        background-color: yellow;
+    }
+    50% {
+        background-color: blue;
+    }
+    100% {
+        background-color: green;
+    }
+}
+
+#ok {
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    right: 50px;
+    top: 400px;
+    border: 3px solid black;
+    border-radius: 30px;
+    height: 50px;
+    width: 125px;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+#restart {
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    bottom: 170px;
+    left: 275px;
+}
